@@ -45,6 +45,33 @@
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <h1 class="mc"><a href="index.html">XEROX</a></h1>
+        <div class="nav">
+            <ul id="menuList">
+                <li><a href="case.html">Case Studies</a></li>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Services</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="develpment.html">Web Development</a>
+                    <a href="develpment.html">Digital Transformation</a>
+                </div>
+                </div>
+                
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Learning</a></li>
+            </ul>
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" oncanplay="toggleMenu()">---</i>
+        </div>
+        <div class="nav2"><a href="contactform.html">
+                <h2 onclick="document.location='contactform.html'">Schedule Strategy Call </span>→<span></h2>
+            </a></div>
+    </div>
     <div class="body">
     <h1 style="font-size: 50px; margin-top: 50px;">Thank you - please check you inbox for the ebook.</h1>
     <h3 style="color: gray; margin-bottom: 50px;">Interested in accessing 2,000+ passionate engineers with experience in 100+ technologies, in your timezone?<br> <br> Hear from our CEO below on how we could support your development goals and schedule a free strategy call below.</h3>
@@ -97,22 +124,7 @@
              <button onclick="alertbox()">Submit</button>
     </section>
 
-    <script>
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight = "0px";
-
-        function toggleMenu(){
-            if(menuList.style.maxHeight = "0px"){
-                menuList.style.maxHeight = "300px";
-            }
-            else{
-                menuList.style.maxHeight = "0px";
-            }
-        }
-
-        function alertbox(){
-            alert("Your request is submitted")
-        }
-    </script>
+    
+    <script src="index.js"></script>
 </body>
 </html>

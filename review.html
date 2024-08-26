@@ -62,7 +62,15 @@
         <div class="nav">
             <ul id="menuList">
                 <li><a href="case.html">Case Studies</a></li>
-                <li><a href="services.html">Services</a></li>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Services</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="develpment.html">Web Development</a>
+                    <a href="develpment.html">Digital Transformation</a>
+                </div>
+                </div>
+                
                 <li><a href="about.html">About</a></li>
                 <li><a href="#">Reviews</a></li>
                 <li><a href="#">Careers</a></li>
@@ -72,8 +80,8 @@
         <div class="menu-icon">
             <i class="fa-solid fa-bars" oncanplay="toggleMenu()">---</i>
         </div>
-        <div class="nav2"><a href="#">
-                <h2>Schedule Strategy Call </span>→<span></h2>
+        <div class="nav2"><a href="contactform.html">
+                <h2 onclick="document.location='contactform.html'">Schedule Strategy Call </span>→<span></h2>
             </a></div>
     </div>
 
@@ -185,23 +193,8 @@
         <button onclick="alertbox()">Submit</button>
     </section>
 
-    <script>
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight = "0px";
-
-        function toggleMenu() {
-            if (menuList.style.maxHeight = "0px") {
-                menuList.style.maxHeight = "300px";
-            }
-            else {
-                menuList.style.maxHeight = "0px";
-            }
-        }
-
-        function alertbox() {
-            alert("Your request is submitted")
-        }
-    </script>
+    
+    <script src="index.js"></script>
 </body>
 
 </html>

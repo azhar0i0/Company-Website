@@ -36,7 +36,15 @@
         <div class="nav">
             <ul id="menuList">
                 <li><a href="case.html">Case Studies</a></li>
-                <li><a href="#servic">Services</a></li>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Services</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="develpment.html">Web Development</a>
+                    <a href="develpment.html">Digital Transformation</a>
+                </div>
+                </div>
+                
                 <li><a href="about.html">About</a></li>
                 <li><a href="#">Reviews</a></li>
                 <li><a href="#">Careers</a></li>
@@ -188,6 +196,9 @@
         <!-- <div class="buttonend" style="margin-top: 20px; margin-bottom: 50px;"><a href="p5">Submit</a></div> -->
         <button onclick="alertbox()">Submit</button>
     </section>
+    
+    <script src="index.js"></script>
 </body>
+
 
 </html>
