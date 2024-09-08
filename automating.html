@@ -5,12 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoMating People</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .autotext1 {
+            display: flex;
+            justify-content: space-evenly;
             font-size: 25px;
             margin-top: 50px;
             margin-bottom: 70px;
+        }
+
+        .autotext1 h1 {
+            width: 40%;
+        }
+
+        .autotext1 p {
+            color: gray;
+            font-size: 20px;
+            width: 30%;
+        }
+
+        @media (max-width:780px) {
+            .autotext1 {
+                display: flex;
+                flex-direction: column;
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .autotext1 h1 {
+                width: 100%;
+            }
+
+            .autotext1 p {
+                margin: 0% 10%;
+                width: 80%;
+            }
         }
 
         #auto1 img {
@@ -19,8 +53,14 @@
         }
 
         .autotext2 {
+            margin: 20px 100px;
             display: flex;
             justify-content: center;
+        }
+
+        .autotext21 {
+            margin: 20px 100px;
+            text-align: center;
         }
 
         #auto2 {
@@ -29,50 +69,108 @@
             justify-content: space-around;
         }
 
+        .autotext3 {
+            width: 35%;
+        }
+
         .progect-gallery {
             grid-column-gap: 30px;
             display: flex;
         }
 
-        #auto3{
+        #auto3 {
             display: flex;
             margin: 150px 250px;
+        }
+
+        @media (max-width:780px) {
+            #auto1 img {
+                width: 90%;
+            }
+            .autotext21 {
+                margin: 20px;
+                text-align: center;
+            }
+
+            #auto2 {
+                margin-top: 70px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .autotext3 {
+                width: 80%;
+                margin-top: 40px;
+                margin-left: 10%;
+            }
+
+            #auto3 {
+                display: flex;
+                flex-direction: column;
+                margin: 10% 10%;
+            }
+
+            #auto3 h1 {
+                font-size: 16px;
+            }
+
+            .gallery-images {
+                margin: auto;
+            }
+
+            .gallery-images2 {
+                display: none;
+            }
         }
     </style>
 </head>
 
-<body>
-    <div class="navbar">
-        <h1 class="mc"><a href="index.html">Zyberstar</a></h1>
-        <div class="nav">
-            <ul id="menuList">
-                <li><a href="case.html">Case Studies</a></li>
-
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Services</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="develpment.html">Web Development</a>
-                    <a href="develpment.html">Digital Transformation</a>
+<body class="p-0 m-0 border-0 bd-example m-0 border-0">
+    <section id="navbar">
+        <nav class="navbar navbar-light navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html" style="font-weight: bolder; font-size: 40px; color: #ff7f50;">Zyberstar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left: 50px;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="case.html">Case Studies</a>
+                        </li>
+                        <!-- -------------dropdown--------------- -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item hover" href="develpment.html">Web Development</a></li>
+                                <li><a class="dropdown-item hover" href="develpment.html">Digital Transformation</a></li>
+                            </ul>
+                        </li>
+                        <!-- -------------dropdown--------------- -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="review.html">Review</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#end">Information</a>
+                        </li>
+    
+                    </ul>
                 </div>
-                </div>
-                
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Learning</a></li>
-            </ul>
-        </div>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars" oncanplay="toggleMenu()">---</i>
-        </div>
+            </div>
+        </nav>
         <div class="nav2"><a href="contactform.html">
-                <h2 onclick="document.location='contactform.html'">Schedule Strategy Call </span>→<span></h2>
-            </a></div>
-    </div>
+            <h2 onclick="document.location='contactform.html'">Schedule Strategy Call </span>→<span></h2>
+          </a></div>
+    </section>
     <section id="auto1">
-        <div class="autotext1 flex2">
-            <h1 style=" width: 40%;">Automating People Operations with 30+ integrations</h1>
-            <p style="color: gray; font-size: 20px; width: 30%;">Devsinc helped Sapling rapidly expanded their team,
+        <div class="autotext1">
+            <h1>Automating People Operations with 30+ integrations</h1>
+            <p>Devsinc helped Sapling rapidly expanded their team,
                 improve integrations and support some of the world's fastest growing companies.</p>
         </div>
         <img alt="" loading="lazy"
@@ -81,15 +179,15 @@
             srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b67fc4280a477388b59d15_sapling-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b67fc4280a477388b59d15_sapling-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b67fc4280a477388b59d15_sapling-p-1080.png 1080w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b67fc4280a477388b59d15_sapling-p-1600.png 1600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b67fc4280a477388b59d15_sapling-p-2000.png 2000w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b67fc4280a477388b59d15_sapling-p-2600.png 2600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b67fc4280a477388b59d15_sapling.png 3091w"
             class="project-page-image">
         <div class="autotext2">
-            <div style=" margin:20px 100px; width: 150px; text-align: center;">
+            <div class="autotext21">
                 <h1 style="color: #ff7f50; font-size: 50px;">16</h1>
                 <p>Embedded Team Members</p>
             </div>
-            <div style=" margin:20px 100px; text-align: center;">
+            <div class="autotext21">
                 <h1 style="color: #ff7f50; font-size: 50px;">32</h1>
                 <p>Integrations Built</p>
             </div>
-            <div style=" margin:20px 100px; text-align: center;">
+            <div class="autotext21">
                 <h1 style="color: #ff7f50; font-size: 50px;">$10M</h1>
                 <p>Venture Funding</p>
             </div>
@@ -101,21 +199,21 @@
                 <script type="text/x-wf-template"
                     id="wf-template-da6461fe-d251-dd1e-fea3-1f013fde94a5">%3Cdiv%20role%3D%22listitem%22%20class%3D%22gallery-image-item%20w-dyn-item%20w-dyn-repeater-item%22%3E%3Cimg%20alt%3D%22%22%20loading%3D%22lazy%22%20src%3D%22https%3A%2F%2Fcdn.prod.website-files.com%2F65e9d803e7334ec910a26f07%2F664cb1d357c07e1e0e35716d_image%2520384.png%22%20sizes%3D%22(max-width%3A%20479px)%20100vw%2C%20(max-width%3A%20767px)%2046vw%2C%20(max-width%3A%20991px)%2047vw%2C%20(max-width%3A%201279px)%2025vw%2C%20302.140625px%22%20srcset%3D%22https%3A%2F%2Fcdn.prod.website-files.com%2F65e9d803e7334ec910a26f07%2F664cb1d357c07e1e0e35716d_image%2520384-p-500.png%20500w%2C%20https%3A%2F%2Fcdn.prod.website-files.com%2F65e9d803e7334ec910a26f07%2F664cb1d357c07e1e0e35716d_image%2520384-p-800.png%20800w%2C%20https%3A%2F%2Fcdn.prod.website-files.com%2F65e9d803e7334ec910a26f07%2F664cb1d357c07e1e0e35716d_image%2520384.png%201000w%22%20class%3D%22gallery-image%22%2F%3E%3C%2Fdiv%3E</script>
                 <div role="list" class="gallery-image-item w-dyn-items">
-                    <div role="listitem" class="gallery-image-item w-dyn-item w-dyn-repeater-item"><img
+                    <div role="listitem" class="gallery-image-item gallery-images2 w-dyn-item w-dyn-repeater-item"><img
                             style="border-radius: 20px;" alt="" loading="lazy"
                             src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664cb1d357c07e1e0e35716d_image%20384.png"
                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 46vw, (max-width: 991px) 47vw, (max-width: 1279px) 25vw, 302.140625px"
                             srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664cb1d357c07e1e0e35716d_image%20384-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664cb1d357c07e1e0e35716d_image%20384-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664cb1d357c07e1e0e35716d_image%20384.png 1000w"
                             class="gallery-image"></div>
                     <div role="listitem" class="gallery-image-item w-dyn-item w-dyn-repeater-item"><img
-                            style="border-radius: 20px;" alt="" loading="lazy"
+                            style="border-radius: 20px; padding-top: 10px;" alt="" loading="lazy"
                             src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664cb1f8a6b0fdd0fa7a4f4b_image%20387.png"
                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 46vw, (max-width: 991px) 47vw, (max-width: 1279px) 25vw, 302.140625px"
                             srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664cb1f8a6b0fdd0fa7a4f4b_image%20387-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664cb1f8a6b0fdd0fa7a4f4b_image%20387-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664cb1f8a6b0fdd0fa7a4f4b_image%20387-p-1080.png 1080w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664cb1f8a6b0fdd0fa7a4f4b_image%20387-p-1600.png 1600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664cb1f8a6b0fdd0fa7a4f4b_image%20387.png 2000w"
                             class="gallery-image"></div>
                 </div>
             </div>
-            <div class="gallery-images gap-30px w-dyn-list">
+            <div class="gallery-images gallery-images2 gap-30px w-dyn-list">
                 <script type="text/x-wf-template"
                     id="wf-template-6ae79a49-f0c4-48f5-e051-7c9b9b5dcb9b">%3Cdiv%20role%3D%22listitem%22%20class%3D%22w-dyn-item%20w-dyn-repeater-item%22%3E%3Cimg%20alt%3D%22%22%20loading%3D%22lazy%22%20src%3D%22https%3A%2F%2Fcdn.prod.website-files.com%2F65e9d803e7334ec910a26f07%2F664cb223e735c2e00b36063a_image%2520385.png%22%20sizes%3D%22(max-width%3A%20479px)%20100vw%2C%20(max-width%3A%20767px)%2046vw%2C%20(max-width%3A%20991px)%2047vw%2C%20(max-width%3A%201279px)%2025vw%2C%20302.140625px%22%20srcset%3D%22https%3A%2F%2Fcdn.prod.website-files.com%2F65e9d803e7334ec910a26f07%2F664cb223e735c2e00b36063a_image%2520385-p-500.png%20500w%2C%20https%3A%2F%2Fcdn.prod.website-files.com%2F65e9d803e7334ec910a26f07%2F664cb223e735c2e00b36063a_image%2520385-p-800.png%20800w%2C%20https%3A%2F%2Fcdn.prod.website-files.com%2F65e9d803e7334ec910a26f07%2F664cb223e735c2e00b36063a_image%2520385.png%201000w%22%20class%3D%22gallery-image%22%2F%3E%3C%2Fdiv%3E</script>
                 <div role="list" class="gallery-image-item w-dyn-items">
@@ -134,23 +232,22 @@
                 </div>
             </div>
         </div>
-        <div class="autotext3" style="width: 35%;">
+        <div class="autotext3">
             <h1>Understanding the Opportunities in People Operations</h1>
-                <li style="color: gray;"><span style="font-weight: bolder;">‍Rapid Team Expansion:</span> Sapling
-                    needed to scale their development team quickly to maintain product momentum. Required
-                    experienced engineers proficient in Angular and Rails, with a strong understanding of
-                    microservice architecture.</li>
-                <li style="color: gray;"><span style="font-weight: bolder;">Technological Integration: </span>Their
-                    platform needed decomposition into smaller, manageable subsystems to enhance maintainability and
-                    scalability.</li>
-                <li style="color: gray;"><span style="font-weight: bolder;">Seamless Team Integration: </span>They
-                    required an embedded team that could operate as an extension of existing staff, maximizing the
-                    impact of their fundraising by leveraging top-tier engineering talent within their time zone to
-                    accelerate product development.</li>
+            <li style="color: gray;"><span style="font-weight: bolder;">‍Rapid Team Expansion:</span> Sapling
+                needed to scale their development team quickly to maintain product momentum. Required
+                experienced engineers proficient in Angular and Rails, with a strong understanding of
+                microservice architecture.</li>
+            <li style="color: gray;"><span style="font-weight: bolder;">Technological Integration: </span>Their
+                platform needed decomposition into smaller, manageable subsystems to enhance maintainability and
+                scalability.</li>
+            <li style="color: gray;"><span style="font-weight: bolder;">Seamless Team Integration: </span>They
+                required an embedded team that could operate as an extension of existing staff, maximizing the
+                impact of their fundraising by leveraging top-tier engineering talent within their time zone to
+                accelerate product development.</li>
         </div>
     </section>
     <section id="auto3">
-        <hr style="height: 150px; margin-right: 50px;">
         <h1>After we raised our seed round, we needed to scale our engineering team quickly to deliver on a growing
             number of integrations for our customers. Devsinc delivered. Their embedded team offering quickly become a
             core part of our company, and many of their leads grew to become our engineering leads.</h1>
@@ -185,7 +282,8 @@
         <!-- <div class="buttonend" style="margin-top: 20px; margin-bottom: 50px;"><a href="p5">Submit</a></div> -->
         <button onclick="alertbox()">Submit</button>
     </section>
-    
+
     <script src="index.js"></script>
 </body>
+
 </html>
