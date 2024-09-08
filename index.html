@@ -4,74 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEVSiNC</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
+    <link rel="stylesheet" href="index.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    <div class="navbar">
-        <h1 class="mc"><a href="index.html">Zyberstar</a></h1>
-        <div class="nav">
-            <ul id="menuList">
-                <li><a href="case.html">Case Studies</a></li>
 
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Services</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="develpment.html">Web Development</a>
-                    <a href="develpment.html">Digital Transformation</a>
+<body class="p-0 m-0 border-0 bd-example m-0 border-0">
+    <section id="navbar">
+        <nav class="navbar navbar-light navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html" style="font-weight: bolder; font-size: 40px; color: #ff7f50;">Zyberstar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left: 50px;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="case.html">Case Studies</a>
+                        </li>
+                        <!-- -------------dropdown--------------- -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item hover" href="develpment.html">Web Development</a></li>
+                                <li><a class="dropdown-item hover" href="develpment.html">Digital Transformation</a></li>
+                            </ul>
+                        </li>
+                        <!-- -------------dropdown--------------- -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="review.html">Review</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#end">Information</a>
+                        </li>
+    
+                    </ul>
                 </div>
-                </div>
-                
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Learning</a></li>
-            </ul>
-        </div>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars" oncanplay="toggleMenu()">---</i>
-        </div>
+            </div>
+        </nav>
         <div class="nav2"><a href="contactform.html">
-                <h2 onclick="document.location='contactform.html'">Schedule Strategy Call </span>→<span></h2>
-            </a></div>
-    </div>
-    <!-- <div id="servic">
-        <div style="display: flex;"><hr style="display: none;"><li><a href="#">Web Development</a></li></div>
-        <div style="display: flex;"><hr style="display: none;"><li><a href="#">Generative AI</a></li></div>
-        <div style="display: flex;"><hr style="display: none;"><li><a href="#">MobileApp Development</a></li></div>
-        <div style="display: flex;"><hr style="display: none;"><li><a href="#">Digital Transformation</a></li></div>
-    </div> -->
-    <section id="p1">
-        <h1>Be the market leader <br> in your industry</h1>
-        <p>Access 2,000+ passionate and experienced software engineers with skillsets in <br> 100+ technologies, in your
-            timezone.</p>
-        <button class="btnp1" onclick="document.location='contactform.html'">Schedule Free Strategy Call</button>
-        <button class="btnp1t" onclick="document.location='case.html'">See our Work</button>
+            <h2 onclick="document.location='contactform.html'">Schedule Strategy Call </span>→<span></h2>
+          </a></div>
     </section>
-    <section id="p2">
+        <!-- End Example Code -->
+        <section id="p1">
+            <h1>Be the market leader <br> in your industry</h1>
+            <p>Access 2,000+ passionate and experienced software engineers with skillsets in 100+ technologies, in your
+                timezone.</p>
+            <button class="btnp1" onclick="document.location='contactform.html'">Schedule Free Strategy Call</button>
+            <button class="btnp1t" onclick="document.location='case.html'">See our Work</button>
+        </section>
+    <section id="p2" style="margin-top: 100px;">
         <h1>From Idea to Completion, we bring Full-Stack Expertise</h1>
-        <div class="boxp2">
-            <div class="boxp21">
-                <a href="develpment.html">
-                    <h2> Web Development </h2>
-                    <p>Deliver high-quality web Development, design and functionality tailored for your business.</p>
-                </a>
-                <hr>
-            </div>
-            <div class="boxp21"><a href="develpment.html">
-                    <h2>Digital Transformation</h2>
-                    <p>Digital, automate and accelerateyour business operations through digital transformation.</p>
-                </a>
-                <hr>
+        <div class="container">
+            <div class="boxp2 row">
+                <div class="boxp21 container col-lg-5 col-md-6 col-10">
+                    <a href="develpment.html">
+                        <h2> Web Development </h2>
+                        <p>Deliver high-quality web Development, design and functionality tailored for your business.
+                        </p>
+                    </a>
+                    <hr>
+                </div>
+                <div class="boxp21 container col-lg-5 col-md-6 col-10">
+                    <a href="develpment.html">
+                        <h2>Digital Transformation</h2>
+                        <p>Digital, automate and accelerateyour business operations through digital transformation.</p>
+                    </a>
+                    <hr>
+                </div>
             </div>
         </div>
     </section>
-    <section id="p3">
-        <div class="p3">
-            <div class="p31">
+    <section id="p3 container" style="background-image: linear-gradient(180deg, white, #fff1eb, #ffae91); margin-top: 100px; padding-bottom: 100px;">
+        <div class="p3 row">
+            <div class="p31 col-lg-5 col-md-6 col-12">
                 <h6>Pricing</h6>
                 <h1>We leverage the <span style="color: #ff7f50;">latest advancements in AI</span> to deliver the
                     highest
@@ -82,22 +97,21 @@
                     designed to help you build, grow, and revolutionize your business.</p>
                 <button onclick="document.location='review.html'">See Our Reviews</button>
                 <div class="flex" style="margin-top: 12px;">
-                    <div>
+                    <div style="margin-left: 20px;">
                         <h2>236+</h2>
                         <p>Active Clients</p>
                     </div>
-                    <div>
+                    <div style="margin-left: 20px;">
                         <h2>3000+</h2>
                         <p>Projects Delivered</p>
                     </div>
-                    <div>
+                    <div style="margin-left: 20px;">
                         <h2>23+</h2>
                         <p>Countries supported</p>
                     </div>
                 </div>
             </div>
-            <div class="p32" style="
-    box-shadow: 2px 5px 10px black;">
+            <div class="p32 col-lg-5 col-md-6 col-12" style="box-shadow: 2px 5px 10px black;">
                 <div class="p321 flex">
                     <div>
                         <h3>Starting Form</h3>
@@ -132,37 +146,33 @@
                     </a>
                 </div>
             </div>
+        </div>
     </section>
     <section id="p4">
         <h1>We've helped our clients complete 3,000+ projects</h1>
         <h6>Over the last 15 years, we've been driven by our passion for helping global clients achieve their goals.
         </h6>
-        <div class="flex2">
-            <div class="boxp4">
-                Devsinc has stood out for their promptness and responsiveness.<br><br>The client is extremely satisfied
-                with their performance and technical skills. All in all, they're a reliable and committed partner
-                <br><br>Parham, President, Kudo Westervelt
-            </div>
-            <div class="boxp4">
-                It is an absolute honor to work with such hard working and dedicated folks.<br><br>The effort that you
-                give every month is a lot but you really surpassed it to achieve this new record.<br><br>Nimesh Shah,
-                CEO, Orbrick
+        <div class="container" style="margin-top: 50px;">
+            <div class="flex2 row">
+                <div class="boxp4 col-lg-3 col-md-3 col-10">
+                    Devsinc has stood out for their promptness and responsiveness.<br><br>The client is extremely
+                    satisfied
+                    with their performance and technical skills. All in all, they're a reliable and committed partner
+                    <br><br>Parham, President, Kudo Westervelt
+                </div>
+                <div class="boxp4 col-lg-3 col-md-3 col-10">
+                    It is an absolute honor to work with such hard working and dedicated folks.<br><br>The effort that
+                    you
+                    give every month is a lot but you really surpassed it to achieve this new record.<br><br>Nimesh
+                    Shah,
+                    CEO, Orbrick
 
-            </div>
-            <div class="boxp4">
-                Devsinc helped us hit the ground running on our MVP development.<br><br>They helped us build out a
-                number of important integrations across payments, authentication and blockchain
-                integrations.<br><br>Ramesh Doddi, CTO, HoneyBricks
-            </div>
-            <div class="boxp4">
-                Responsive and committed, Devsinc provides quality work in a timely manner. <br><br>They also ensure
-                that the developers they provide meet the client's needs, leading to an ongoing partnership.<br><br>Eric
-                Hurst, Co-Founder Intellirent
-            </div>
-            <div class="boxp4">
-                After we raised our seed round, we needed to scale our engineering team quickly to deliver on a growing
-                number of integrations.<br><br>Their embedded team offering quickly become a core part of our
-                company.<br><br>Andy Crebar, CEO, Sapling
+                </div>
+                <div class="boxp4 col-lg-3 col-md-3 col-10">
+                    Devsinc helped us hit the ground running on our MVP development.<br><br>They helped us build out a
+                    number of important integrations across payments, authentication and blockchain
+                    integrations.<br><br>Ramesh Doddi, CTO, HoneyBricks
+                </div>
             </div>
         </div>
     </section>
@@ -170,72 +180,77 @@
         <h1>Explore some of our latest projects</h1>
         <h5 style="color: gray;">Devsinc empowers hundreds of clients globally to embrace modern technology and elevate
             customer experiences.</h5>
-        <div class="p5">
-            <div class="p5d1"> 
-                <a href="automating.html">
-                <img alt="project" loading="lazy"
-                    src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com.png"
-                    sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, (max-width: 1279px) 44vw, (max-width: 1439px) 41vw, 525.0234375px"
-                    srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-1080.png 1080w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-1600.png 1600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-2000.png 2000w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-2600.png 2600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com.png 2880w"
-                    class="project-image-full"> <h2>Automating People Operations with 30+ integrations</h2>
-                <p style="color: gray;">Devsinc helped Sapling rapidly expanded their team, improve integrations and
-                    support some of the world's fastest growing companies.</p> </a>
-            </div>
-            <div class="p5d1">
-                <a href="automating.html">
-                <img alt="project" loading="lazy"
-                    src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com.png"
-                    sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, (max-width: 1279px) 44vw, (max-width: 1439px) 41vw, 525.0234375px"
-                    srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-1080.png 1080w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-1600.png 1600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-2000.png 2000w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-2600.png 2600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com.png 2880w"
-                    class="project-image-full">
-                <h2>How Devsinc helped HoneyBricks expands investment accessibility</h2>
-                <p style="color: gray;">HoneyBricks used blockchain for secure real estate investment, supporting 3,500
-                    investors and managing over $5 million.</p></a>
-            </div>
-        </div>
-        <div class="p5">
-            <div class="p5d1">
-                <a href="automating.html">
-                <img alt="project" loading="lazy"
-                    src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com.png"
-                    sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, (max-width: 1279px) 44vw, (max-width: 1439px) 41vw, 525.0234375px"
-                    srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-1080.png 1080w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-1600.png 1600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-2000.png 2000w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-2600.png 2600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com.png 2880w"
-                    class="project-image-full">
-                <h2>How Devsinc helped HoneyBricks expands investment accessibility</h2>
-                <p style="color: gray;">HoneyBricks used blockchain for secure real estate investment, supporting 3,500
-                    investors and managing over $5 million.</p></a>
-            </div>
-            <div class="p5d1">
-                <a href="automating.html">
-                <img alt="project" loading="lazy"
-                    src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com.png"
-                    sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, (max-width: 1279px) 44vw, (max-width: 1439px) 41vw, 525.0234375px"
-                    srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-1080.png 1080w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-1600.png 1600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-2000.png 2000w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-2600.png 2600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com.png 2880w"
-                    class="project-image-full">
-                <h2>How Devsinc helped HoneyBricks expands investment accessibility</h2>
-                <p style="color: gray;">HoneyBricks used blockchain for secure real estate investment, supporting 3,500
-                    investors and managing over $5 million.</p></a>
-            </div>
-        </div>
-        <div class="p5d2">
-            <img src="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65f2d2e84f11f84de65acc1b_65ec93f36cf469713ef54352_Finalizing%20Ebook%20Design.webp"
-                loading="lazy" width="Auto" sizes="(max-width: 479px) 100vw, 390.9375px" alt=""
-                srcset="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65f2d2e84f11f84de65acc1b_65ec93f36cf469713ef54352_Finalizing%20Ebook%20Design-p-500.webp 500w, https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65f2d2e84f11f84de65acc1b_65ec93f36cf469713ef54352_Finalizing%20Ebook%20Design-p-800.webp 800w, https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65f2d2e84f11f84de65acc1b_65ec93f36cf469713ef54352_Finalizing%20Ebook%20Design-p-1080.webp 1080w, https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65f2d2e84f11f84de65acc1b_65ec93f36cf469713ef54352_Finalizing%20Ebook%20Design.webp 1210w"
-                class="image-7">
-
-            <div class="p5d2p">
-                <h1>Be confident in finding the best software development partner</h1>
-                <p>Download our eBook covering <span>The 14 Questions You Need to Ask When Choosing Your Software
-                        Development Agency</span> to help you identify the right partner for your company.
-                    <br><br>You'll learn about how to differentiate agencies based on: <br><br> <span> Skills</span> -
-                    discover the 4 key questions you should to ask to know the agency has the right technical and
-                    communication skills to deliver. <br><br><span>Quality </span>- learn the 3 areas to focus on to
-                    ensure your software is being developed with the highest quality coding practices.
-                    <br><br><span>Budget </span>- understand the 3 types of delivery methodologies and how to ensure you
-                    project is on time and within budget
-                </p>
-                Email * <br> <input type="text">
-                <div class="buttonp5"><a href="submit.html">Submit</a></div>
+        <div class="container" style="margin-top: 50px;">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="card"><a href="automating.html">
+                            <img alt="project" loading="lazy"
+                                src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com.png"
+                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, (max-width: 1279px) 44vw, (max-width: 1439px) 41vw, 525.0234375px"
+                                srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-1080.png 1080w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-1600.png 1600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-2000.png 2000w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com-p-2600.png 2600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7012a7471f4b861da7_kallidus.com.png 2880w"
+                                class="project-image-full card-img-top">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h3>Automating People Operations with 30+ integrations</h3>
+                                </div>
+                                <div class="card-text" style="color: gray;">Devsinc helped Sapling rapidly expanded their team, improve
+                                    integrations
+                                    and support some of the world's fastest growing companies.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card"><a href="automating.html">
+                            <img alt="project" loading="lazy"
+                                src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com.png"
+                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, (max-width: 1279px) 44vw, (max-width: 1439px) 41vw, 525.0234375px"
+                                srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-1080.png 1080w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-1600.png 1600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-2000.png 2000w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com-p-2600.png 2600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae7e9a93601ea3ba7343_honeybricks.com.png 2880w"
+                                class="project-image-full card-img-top">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h3>How Devsinc helped HoneyBricks expands investment accessibility</h3>
+                                </div>
+                                <div class="card-text"  style="color: gray;">HoneyBricks used blockchain for secure real estate investment,
+                                    supporting
+                                    3,500 investors and managing over $5 million.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card"><a href="automating.html">
+                            <img alt="project" loading="lazy"
+                                src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com.png"
+                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, (max-width: 1279px) 44vw, (max-width: 1439px) 41vw, 525.0234375px"
+                                srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-1080.png 1080w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-1600.png 1600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-2000.png 2000w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com-p-2600.png 2600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae8a50a0c479de6f5658_recurate.com.png 2880w"
+                                class="project-image-full card-img-top">
+                            <div class="card-body">
+                                <div class="card-title">How Devsinc helped HoneyBricks expands investment accessibility
+                                </div>
+                                <div class="card-text" style="color: gray;">HoneyBricks used blockchain for secure real estate investment,
+                                    supporting 3,500 investors and managing over $5 million.</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card"><a href="#">
+                            <img alt="project" loading="lazy"
+                                src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com.png"
+                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, (max-width: 1279px) 44vw, (max-width: 1439px) 41vw, 525.0234375px"
+                                srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-500.png 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-800.png 800w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-1080.png 1080w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-1600.png 1600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-2000.png 2000w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com-p-2600.png 2600w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/66b3ae98129e582b60cef84a_kudoway.com.png 2880w"
+                                class="project-image-full card-img-top">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h3>How Devsinc helped HoneyBricks expands investment accessibility</h3>
+                                </div>
+                                <div class="card-text" style="color: gray;">HoneyBricks used blockchain for secure real estate investment,
+                                    supporting
+                                    3,500 investors and managing over $5 million.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -243,20 +258,22 @@
         <h1>Schedule a free consultation with one of our experts.</h1>
         <p>Take the first step towards a brighter future and supercharge your business with cutting-edge technologies,
             expert guidance, and unparalleled support.</p>
-        <div class="endb"><a href="contactform.html">Schedule Now</a></div>
-        <div class="imgp5">
-            <img sizes="(max-width: 479px) 338.81964111328125px, (max-width: 767px) 313.455078125px, (max-width: 991px) 56vw, (max-width: 1919px) 512.9583129882812px, 569.9342651367188px"
+        <div class="endb">
+            <a href="contactform.html">Schedule Now</a>
+        </div>
+        <div class="imgp5 container">
+            <img class="col-lg-4 col-0" sizes="(max-width: 479px) 338.81964111328125px, (max-width: 767px) 313.455078125px, (max-width: 991px) 56vw, (max-width: 1919px) 512.9583129882812px, 569.9342651367188px"
                 srcset="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9d803e7334ec910a2711e_Rectangle%25201068-p-500.jpg 500w, https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9d803e7334ec910a2711e_Rectangle%201068.webp 517w"
                 alt="Our team"
                 src="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9d803e7334ec910a2711e_Rectangle%201068.webp"
                 loading="lazy" class="cta-image rotate-right">
-            <img loading="lazy"
+            <img class="col-lg-4 col-0" loading="lazy"
                 src="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9d803e7334ec910a2711f_Image%203.webp"
                 alt="Team" class="cta-image rotate-left-6">
-            <img loading="lazy"
+            <img class="col-lg-4 col-0" loading="lazy"
                 src="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9d803e7334ec910a26fae_image%204%20(1).webp"
                 alt="Team" class="cta-image rotate-right-5">
-        </div>
+        </div> 
         <div class="end">
             <h3>1160 Battery St Suite 1111,
                 San Francisco, CA, 94111,
@@ -269,8 +286,6 @@
         <!-- <div class="buttonend" style="margin-top: 20px; margin-bottom: 50px;"><a href="p5">Submit</a></div> -->
         <button onclick="alertbox()">Submit</button>
     </section>
-
-    <script src="index.js"></script>
 </body>
 
 </html>
