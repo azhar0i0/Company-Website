@@ -1,3 +1,13 @@
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'flex'
+}
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'none'
+}
+
+
 
         /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
