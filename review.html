@@ -5,26 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews</title>
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <script src="https://kit.fontawesome.com/44f557ccce.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.js">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        #body{
+        * {
+            /* box-sizing: border-box; */
+            margin: 0;
+            padding: 0;
+        }
+
+        .body {
+            /* display: flex; */
+            /* height: 100vh; */
+            margin-top: 70px;
+            margin-bottom: 100px;
+        }
+
+        .rev-section {
+            margin: auto;
+            padding: 0 1rem;
+            max-width: 1100px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: black;
+            margin-bottom: .5rem;
+        }
+
+        .note {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: gray;
+        }
+
+        .reviews {
+            /* margin: 2rem auto; */
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+        }
+
+        .review {
+            /* margin: 0 1rem; */
+            min-width: 300px;
+        }
+
+        .head-review {
+            margin: 1.75rem auto;
+            width: 150px;
+            height: 150px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            /* object-fit: cover; */
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+        }
+
+        .body-review {
+            background-color: rgb(238, 238, 238);
+            padding: 2.5rem;
+            box-shadow: 2px 2px 10px 3px rgb(225, 225, 225);
+        }
+
+        .name-review {
+            font-size: 1.5rem;
+            color: rgb(50, 50, 50);
+            margin-bottom: .25rem;
+        }
+
+        .place-review {
+            color: red;
+            font-style: italic;
+        }
+
+        .rating {
+            color: rgb(253, 180, 42);
+            margin: 1rem 0;
+        }
+
+        .desc-review {
+            line-height: 1.5rem;
+            letter-spacing: 1px;
+            color: rgb(150, 150, 150);
+        }
+
+    
+        @media (max-width: 678px) {
+            .review {
+                margin-top: 1.5rem;
+            }
+        }
+        #end{
+            display: block;
+        }
+
+        /* #body {
             background-color: rgb(4, 4, 88);
         }
+
         .text h1 {
             color: white;
             text-align: center;
             padding: 50px 0px;
             font-size: 60px;
         }
-@media (max-width:780px) {
-    .text h1{
-        font-size: 40px;
-    }
-}
+
+        @media (max-width:780px) {
+            .text h1 {
+                font-size: 40px;
+            }
+        }
+
         .imgreview {
             border-top-right-radius: 20px;
             background-color: gray;
@@ -32,16 +133,17 @@
             width: 40%;
         }
 
-        #review{
+        #review {
             display: flex;
             align-items: center;
             flex-direction: column;
         }
+
         .review {
             background-color: white;
             border-radius: 20px;
             border: 2px solid #ff7f50;
-            margin: 50px 0px;
+            margin: 50px 0px 0px 0px;
             width: 60%;
         }
 
@@ -50,40 +152,47 @@
         }
 
         .boxreview1 h1 {
-            width: 60%;
+            width: 90%;
+            font-size: 20px;
             margin: 10px;
             padding: 12px;
         }
 
         .review h2 {
-            border-radius: 20px;
+            border-radius: 0px 0px 20px 20px;
             background-color: blanchedalmond;
-            font-size: 10px;
+            font-size: 13px;
             padding: 12px;
+            margin-bottom: 0%;
+        }
+
+        .boxreview2 h2 {
+            margin-bottom: 0%;
         }
 
         @media (max-width:780px) {
-            .boxreview1{
+            .boxreview1 {
                 display: flex;
                 flex-direction: column;
             }
+
             .boxreview1 h1 {
                 width: 90%;
                 font-size: 16px;
             }
+
             .imgreview {
-            border-top-right-radius: 0px;
-            background-color: gray;
-            text-align: center;
-            width: 100%;
-        }
-        .review h2 {
-            border-radius: 0px 0px 20px 20px;
-            background-color: blanchedalmond;
-            font-size: 10px;
-            padding: 12px;
-        }
-        }
+                border-top-right-radius: 0px;
+                background-color: gray;
+                text-align: center;
+                width: 100%;
+            }
+
+            .review h2 {
+                font-size: 10px;
+                padding: 12px;
+            }
+        } */
     </style>
 </head>
 
@@ -91,9 +200,11 @@
     <section id="navbar">
         <nav class="navbar navbar-light navbar-expand-lg ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html" style="font-weight: bolder; font-size: 40px; color: #ff7f50;">Zyberstar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="index.html"
+                    style="font-weight: bolder; font-size: 40px; color: #ff7f50;">Zyberstar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left: 50px;">
@@ -107,7 +218,8 @@
                                 aria-expanded="false">Services</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item hover" href="develpment.html">Web Development</a></li>
-                                <li><a class="dropdown-item hover" href="develpment.html">Digital Transformation</a></li>
+                                <li><a class="dropdown-item hover" href="develpment.html">Digital Transformation</a>
+                                </li>
                             </ul>
                         </li>
                         <!-- -------------dropdown--------------- -->
@@ -120,124 +232,257 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#end">Information</a>
                         </li>
-    
+
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="nav2"><a href="contactform.html">
-            <h2 onclick="document.location='contactform.html'">Schedule Strategy Call </span>→<span></h2>
-          </a></div>
+                <h2 onclick="document.location='contactform.html'">Schedule Strategy Call </span>→<span></h2>
+            </a></div>
     </section>
-    <section id="body">
-    <div class="text">
-        <h1>We've helped our clients complete <br> <span style="color: #ff7f50;"> +3,000 projects.</span></h1>
-    </div>
-    <section id="review">
-        <div class="review">
-            <div class="boxreview1">
-                <h1>Devsinc has stood out for their promptness and responsiveness. The client is extremely satisfied
-                    with their
-                    performance and technical skills. All in all, they're a reliable and committed partner.</h1>
-                <div class="imgreview"><img
-                        src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg"
-                        loading="lazy" width="75" height="75" alt="" sizes="75px"
-                        srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan-p-500.jpg 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg 555w"
-                        class="testimonial-image">
-                    <div class="testimonial-name">Parham Akhavan, President</div><a href="#" class="w-inline-block"><img
-                            src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664bc2280f1cde5ff0d20edd_kudo-logo-header.svg"
-                            loading="lazy" width="100" height="Auto" alt="" class="testimonial-company-logo"></a>
+    <!-- <section id="body">
+        <div class="text">
+            <h1>We've helped our clients complete <br> <span style="color: #ff7f50;"> +3,000 projects.</span></h1>
+        </div>
+        <section id="review">
+            <div class="review">
+                <div class="boxreview1">
+                    <h1>Zyberstar has stood out for their promptness and responsiveness. The client is extremely satisfied
+                        with their
+                        performance and technical skills. All in all, they're a reliable and committed partner.</h1>
+                    <div class="imgreview"><img
+                            src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg"
+                            loading="lazy" width="75" height="75" alt="" sizes="75px"
+                            srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan-p-500.jpg 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg 555w"
+                            class="testimonial-image">
+                        <div class="testimonial-name">Parham Akhavan, President</div><a href="#"
+                            class="w-inline-block"><img
+                                src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664bc2280f1cde5ff0d20edd_kudo-logo-header.svg"
+                                loading="lazy" width="100" height="Auto" alt="" class="testimonial-company-logo"></a>
+                    </div>
+                </div class="boxreview2">
+                <h2>h1KUDO’s Journey to Bridging Global Communications | Read the case study.</h2>
+            </div>
+            </div>
+            <div class="review">
+                <div class="boxreview1">
+                    <h1>Responsive and committed, Zyberstar provides quality work in a timely manner. They efficiently
+                        provide the client's in-house team with software development outsourcing services. They also
+                        ensure that the developers they provide meet the client's needs, leading to an ongoing
+                        partnership.</h1>
+                    <div class="imgreview"><img
+                            src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg"
+                            loading="lazy" width="75" height="75" alt="" sizes="75px"
+                            srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan-p-500.jpg 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg 555w"
+                            class="testimonial-image">
+                        <div class="testimonial-name">Parham Akhavan, President</div><a href="#"
+                            class="w-inline-block"><img
+                                src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664bc2280f1cde5ff0d20edd_kudo-logo-header.svg"
+                                loading="lazy" width="100" height="Auto" alt="" class="testimonial-company-logo"></a>
+                    </div>
+                </div class="boxreview2">
+                <h2>h1KUDO’s Journey to Bridging Global Communications | Read the case study.</h2>
+            </div>
+            </div>
+            <div class="review">
+                <div class="boxreview1">
+                    <h1>Zyberstar has stood out for their promptness and responsiveness. The client is extremely satisfied
+                        with their
+                        performance and technical skills. All in all, they're a reliable and committed partner.</h1>
+                    <div class="imgreview"><img
+                            src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg"
+                            loading="lazy" width="75" height="75" alt="" sizes="75px"
+                            srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan-p-500.jpg 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg 555w"
+                            class="testimonial-image">
+                        <div class="testimonial-name">Parham Akhavan, President</div><a href="#"
+                            class="w-inline-block"><img
+                                src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664bc2280f1cde5ff0d20edd_kudo-logo-header.svg"
+                                loading="lazy" width="100" height="Auto" alt="" class="testimonial-company-logo"></a>
+                    </div>
+                </div class="boxreview2">
+                <h2>h1KUDO’s Journey to Bridging Global Communications | Read the case study.</h2>
+            </div>
+            </div>
+            <div class="review" style="margin-bottom: 50px;">
+                <div class="boxreview1">
+                    <h1>Zyberstar has stood out for their promptness and responsiveness. The client is extremely satisfied
+                        with their
+                        performance and technical skills. All in all, they're a reliable and committed partner.</h1>
+                    <div class="imgreview"><img
+                            src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg"
+                            loading="lazy" width="75" height="75" alt="" sizes="75px"
+                            srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan-p-500.jpg 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg 555w"
+                            class="testimonial-image">
+                        <div class="testimonial-name">Parham Akhavan, President</div><a href="#"
+                            class="w-inline-block"><img
+                                src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664bc2280f1cde5ff0d20edd_kudo-logo-header.svg"
+                                loading="lazy" width="100" height="Auto" alt="" class="testimonial-company-logo"></a>
+                    </div>
+                </div class="boxreview2">
+                <h2>h1KUDO’s Journey to Bridging Global Communications | Read the case study.</h2>
+            </div>
+            </div>
+        </section>
+    </section> -->
+    <section class="body">
+        <div class="rev-section">
+
+            <h2 class="title">Our Guests Love Us</h2>
+            <p class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laboriosam possimus
+                perferendis non error neque.</p>
+
+            <div class="reviews row">
+
+                <div class="review col-lg-4 col-md-6 col-sm-12">
+                    <div class="head-review">
+                        <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                            width="250px">
+                    </div>
+                    <div class="body-review">
+                        <div class="name-review">Nathan D.</div>
+                        <div class="place-review">Germany</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+                            eligendi suscipit illum officia ex eos.</div>
+                    </div>
                 </div>
-            </div class="boxreview2">
-            <h2>h1KUDO’s Journey to Bridging Global Communications | Read the case study.</h2>
-        </div>
-        </div>
-        <div class="review">
-            <div class="boxreview1">
-                <h1>Responsive and committed, Devsinc provides quality work in a timely manner. They efficiently provide the client's in-house team with software development outsourcing services. They also ensure that the developers they provide meet the client's needs, leading to an ongoing partnership.</h1>
-                <div class="imgreview"><img
-                        src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg"
-                        loading="lazy" width="75" height="75" alt="" sizes="75px"
-                        srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan-p-500.jpg 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg 555w"
-                        class="testimonial-image">
-                    <div class="testimonial-name">Parham Akhavan, President</div><a href="#" class="w-inline-block"><img
-                            src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664bc2280f1cde5ff0d20edd_kudo-logo-header.svg"
-                            loading="lazy" width="100" height="Auto" alt="" class="testimonial-company-logo"></a>
+                <div class="review col-lg-4 col-md-6 col-sm-12">
+                    <div class="head-review">
+                        <img src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+                            width="250px">
+                    </div>
+                    <div class="body-review">
+                        <div class="name-review">Mary Will</div>
+                        <div class="place-review">Paris</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+                            eligendi suscipit illum officia ex eos.</div>
+                    </div>
                 </div>
-            </div class="boxreview2">
-            <h2>h1KUDO’s Journey to Bridging Global Communications | Read the case study.</h2>
-        </div>
-        </div>
-        <div class="review">
-            <div class="boxreview1">
-                <h1>Devsinc has stood out for their promptness and responsiveness. The client is extremely satisfied
-                    with their
-                    performance and technical skills. All in all, they're a reliable and committed partner.</h1>
-                <div class="imgreview"><img
-                        src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg"
-                        loading="lazy" width="75" height="75" alt="" sizes="75px"
-                        srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan-p-500.jpg 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg 555w"
-                        class="testimonial-image">
-                    <div class="testimonial-name">Parham Akhavan, President</div><a href="#" class="w-inline-block"><img
-                            src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664bc2280f1cde5ff0d20edd_kudo-logo-header.svg"
-                            loading="lazy" width="100" height="Auto" alt="" class="testimonial-company-logo"></a>
+                <div class="review col-lg-4 col-md-6 col-sm-12">
+                    <div class="head-review">
+                        <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            width="250px">
+                    </div>
+                    <div class="body-review">
+                        <div class="name-review">Kevin Tuck</div>
+                        <div class="place-review">New York</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+                            eligendi suscipit illum officia ex eos.</div>
+                    </div>
                 </div>
-            </div class="boxreview2">
-            <h2>h1KUDO’s Journey to Bridging Global Communications | Read the case study.</h2>
-        </div>
-        </div>
-        <div class="review">
-            <div class="boxreview1">
-                <h1>Devsinc has stood out for their promptness and responsiveness. The client is extremely satisfied
-                    with their
-                    performance and technical skills. All in all, they're a reliable and committed partner.</h1>
-                <div class="imgreview"><img
-                        src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg"
-                        loading="lazy" width="75" height="75" alt="" sizes="75px"
-                        srcset="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan-p-500.jpg 500w, https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/663cfc8168250a8b269b5e4f_parham-akhavan.jpg 555w"
-                        class="testimonial-image">
-                    <div class="testimonial-name">Parham Akhavan, President</div><a href="#" class="w-inline-block"><img
-                            src="https://cdn.prod.website-files.com/65e9d803e7334ec910a26f07/664bc2280f1cde5ff0d20edd_kudo-logo-header.svg"
-                            loading="lazy" width="100" height="Auto" alt="" class="testimonial-company-logo"></a>
+                <div class="review col-lg-4 col-md-6 col-sm-12">
+                    <div class="head-review">
+                        <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                            width="250px">
+                    </div>
+                    <div class="body-review">
+                        <div class="name-review">Nathan D.</div>
+                        <div class="place-review">Germany</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+                            eligendi suscipit illum officia ex eos.</div>
+                    </div>
                 </div>
-            </div class="boxreview2">
-            <h2>h1KUDO’s Journey to Bridging Global Communications | Read the case study.</h2>
-        </div>
+            </div>
+
         </div>
     </section>
-</section>
+    
     <section id="end">
         <h1>Schedule a free consultation with one of our experts.</h1>
         <p>Take the first step towards a brighter future and supercharge your business with cutting-edge technologies,
             expert guidance, and unparalleled support.</p>
-        <div class="endb"><a href="contactform.html">Schedule Now</a></div>
-        <div class="imgp5">
-            <img sizes="(max-width: 479px) 338.81964111328125px, (max-width: 767px) 313.455078125px, (max-width: 991px) 56vw, (max-width: 1919px) 512.9583129882812px, 569.9342651367188px"
+        <div class="endb">
+            <a href="contactform.html">Schedule Now</a>
+        </div>
+        <div class="imgp5 container">
+            <img class="col-lg-4 col-0"
+                sizes="(max-width: 479px) 338.81964111328125px, (max-width: 767px) 313.455078125px, (max-width: 991px) 56vw, (max-width: 1919px) 512.9583129882812px, 569.9342651367188px"
                 srcset="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9d803e7334ec910a2711e_Rectangle%25201068-p-500.jpg 500w, https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9d803e7334ec910a2711e_Rectangle%201068.webp 517w"
                 alt="Our team"
                 src="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9d803e7334ec910a2711e_Rectangle%201068.webp"
                 loading="lazy" class="cta-image rotate-right">
-            <img loading="lazy"
+            <img class="col-lg-4 col-0" loading="lazy"
                 src="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9d803e7334ec910a2711f_Image%203.webp"
                 alt="Team" class="cta-image rotate-left-6">
-            <img loading="lazy"
+            <img class="col-lg-4 col-0" loading="lazy"
                 src="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9d803e7334ec910a26fae_image%204%20(1).webp"
                 alt="Team" class="cta-image rotate-right-5">
         </div>
-        <div class="end">
-            <h3>1160 Battery St Suite 1111,
-                San Francisco, CA, 94111,
-                United States</h3>
-            <h3>(E-mail)</h3>
-            <h1 style="margin-top: 70px;">Subscribe</h1>
-            <h2 style="margin-bottom: 70px;">saty upadted with latest in tech</h2>
-            Email * <br> <input type="text">
-        </div>
-        <!-- <div class="buttonend" style="margin-top: 20px; margin-bottom: 50px;"><a href="p5">Submit</a></div> -->
-        <button onclick="alertbox()">Submit</button>
-    </section>
 
-    
+        <div class="container">
+            <footer class="footer">
+                <div class="container">
+                    <div class="end-footer row">
+                        <div class="footer-col col-lg-6 col-md-6 col-6">
+                            <h4>company</h4>
+                            <ul>
+                                <li><a href="#">about us</a></li>
+                                <li><a href="#">our services</a></li>
+                                <li><a href="#">privacy policy</a></li>
+                                <li><a href="#">affiliate program</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col col-lg-6 col-md-6 col-6">
+                            <h4>get help</h4>
+                            <ul>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">shipping</a></li>
+                                <li><a href="#">returns</a></li>
+                                <li><a href="#">order status</a></li>
+                                <li><a href="#">payment options</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col col-lg-6 col-md-6 col-6">
+                            <h4>online shop</h4>
+                            <ul>
+                                <li><a href="#">watch</a></li>
+                                <li><a href="#">bag</a></li>
+                                <li><a href="#">shoes</a></li>
+                                <li><a href="#">dress</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col col-lg-6 col-md-6 col-6" style="margin-top: 30px;">
+                            <h4>follow us</h4>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
     <script src="index.js"></script>
 </body>
 
