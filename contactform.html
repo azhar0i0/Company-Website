@@ -4,109 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.js">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <style>
-        .contact1 {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .contact1 h1 {
-            margin-top: 50px;
-            font-size: 50px;
-        }
-
-        .contact1 p {
-            text-align: center;
-            font-size: 22px;
-            color: gray;
-        }
-
-        .contactform {
-            margin-top: 50px;
-            margin-bottom: 100px;
-            width: 500px;
-            font-size: 22px;
-        }
-
-        @media (max-width:780px) {
-            .contact1 {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
+        #contact{
             width: 90%;
             margin-left: 5%;
         }
-            .contact1 h1 {
-                margin-top: 50px;
-                text-align: center;
-                font-size: 30px;
-            }
-
-            .contact1 p {
-                text-align: center;
-                font-size: 16px;
-                color: gray;
-                width: 90%;
-            }
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin-bottom: 100px;
         }
 
-        .input {
-            width: 400px;
-            height: 30px;
-            border-radius: 5px;
+        #contact h2 {
+            margin-top: 100px;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 10px;
         }
 
-        .input1 {
-            border-radius: 5px;
-            width: 400px;
-            height: 50px;
+        .contact form {
+            width: 600px;
+            text-align: center;
         }
 
-        .contactform button {
-            margin-top: 30px;
-            padding: 12px;
-            font-size: 20px;
-            background-color: #ff50;
-            width: 30%;
-            border-radius: 8px;
+        form .input-box {
+            display: flex;
+            justify-content: space-between;
         }
 
-        @media (max-width:780px) {
-            .contactform {
-                margin-left: 10%;
-            }
-
-            .input {
-                width: 250px;
-                height: 30px;
-                border-radius: 5px;
-            }
-
-            .input1 {
-                border-radius: 5px;
-                width: 250px;
-                height: 50px;
-            }
-
-            .contactform button {
-                margin-top: 30px;
-                padding: 8px;
-                font-size: 15px;
-                background-color: #ff50;
-                width: 30%;
-                border-radius: 8px;
-            }
+        .input-box .input-field {
+            width: 48.5%;
         }
+
+        .field .item {
+            width: 100%;
+            padding: 18px;
+            background: transparent;
+            border: 2px solid #ff7f50;
+            outline: none;
+            font-size: 16px;
+            margin: 12px 0;
+        }
+
+        .field .item::placeholder {
+            color: gray;
+        }
+
+        .field .error-txt {
+            font-size: 14px;
+            color: red;
+            text-align: center;
+            margin: -5px 0 10px;
+            display: none;
+        }
+
+        form .textarea-field .tem {
+            resize: none;
+        }
+
+        form .textarea-field .error-txt {
+            margin-top: -10px;
+        }
+
+        form button {
+            padding: 12px 32px;
+            background: #ff7f50;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            box-shadow: 0 0 10px #ff7f50;
+            font-size: 16px;
+            color: white;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        form button:hover {}
     </style>
 </head>
 
@@ -114,9 +106,11 @@
     <section id="navbar">
         <nav class="navbar navbar-light navbar-expand-lg ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html" style="font-weight: bolder; font-size: 40px; color: #ff7f50;">Zyberstar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="index.html"
+                    style="font-weight: bolder; font-size: 40px; color: #ff7f50;">Zyberstar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left: 50px;">
@@ -130,7 +124,8 @@
                                 aria-expanded="false">Services</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item hover" href="develpment.html">Web Development</a></li>
-                                <li><a class="dropdown-item hover" href="develpment.html">Digital Transformation</a></li>
+                                <li><a class="dropdown-item hover" href="develpment.html">Digital Transformation</a>
+                                </li>
                             </ul>
                         </li>
                         <!-- -------------dropdown--------------- -->
@@ -143,38 +138,53 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#end">Information</a>
                         </li>
-    
+
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="nav2"><a href="contactform.html">
-            <h2 onclick="document.location='contactform.html'">Schedule Strategy Call </span>→<span></h2>
-          </a></div>
+                <h2 onclick="document.location='contactform.html'">Schedule Strategy Call </span>→<span></h2>
+            </a></div>
     </section>
-    <section class="contact1">
-        <h1>Let's discuss your project</h1>
-        <p>We are committed to understanding your requirements and crafting a tailored solution that aligns with your
-            goals.</p>
-        <p style="margin-top: 50px;">Enter your details and someone from our team will reach out to find a time to
-            connect with you.</p>
-    </section>
-    <section style="display: flex; justify-content: center;" id="contactform">
-        <div class="contactform">
-            First Name <br> <input type="text" class="input"> <br><br>
-            Last Name <br> <input type="text" class="input"> <br><br>
-            Email <br> <input type="text" class="input"> <br><br>
-            Company Name <br> <input type="text" class="input"> <br><br>
-            Project Details <br> <input type="text" class="input1"> <br>
-            <br> <input type="checkbox" class="input2">I am contacting Zyberstar about internship or career opportunities
-            <br>
-            <button onclick="alertbox()">Submit</button>
-        </div>
+    <section id="contact">
+        <h2>Contact Us!</h2>
+        <div class="contact">
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                    <div class="error-txt">Full Name can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                    <div class="error-txt">Email Address can't be blank</div>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
+                    <div class="error-txt">Phone Number can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Subject" id="subject" class="item" aut
+                    ocomplete="off">
+                    <div class="error-txt">Subject can't be blank</div>
+                </div>
+            </div>
+
+            <div class="textarea-field field">
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                <div class="error-txt">Message can't be blank</div>
+            </div>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
     </section>
     <section id="end">
         <h1>Schedule a free consultation with one of our experts.</h1>
-        <p>Take the first step towards a brighter future and supercharge your business with cutting-edge technologies,
-            expert guidance, and unparalleled support.</p>
+        <p>Embark on the path to a brighter future by boosting your business with advanced technologies, expert advice, and exceptional support.</p>
         <div class="endb">
             <a href="contactform.html">Schedule Now</a>
         </div>
@@ -239,9 +249,84 @@
             </footer>
         </div>
     </section>
+    
+    
+    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script type="text/javascript">
+        (function() {
+          emailjs.init("XNlTQX9itVGMRwukT");
+        })();
+      </script>
+    <script>
+        // --------------------------navbar---------------------------
+        function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'flex'
+}
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'none'
+}
 
 
-    <script src="index.js"></script>
+
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+//------------------------------end navbar----------------------------------
+
+
+
+        const contactForm = document.querySelector('form');
+        
+        contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      var templateParams = {
+        user_name: name,
+        user_email: email,
+        user_phone: phone,
+        subject: subject,
+        message: message
+      };
+
+      emailjs.send('service_obh6edk', 'template_q63eqhe', templateParams, 'XNlTQX9itVGMRwukT')
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Failed to send message. Please try again.');
+        });
+    });
+
+      </script>
 </body>
 
 </html>
